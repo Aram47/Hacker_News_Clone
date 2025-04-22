@@ -1,0 +1,18 @@
+# node_modules
+backend/auth_service/node_modules
+backend/user_service/node_modules
+backend/search_service/node_modules
+backend/application_service/node_modules
+
+# .env
+backend/auth_service/.development.env
+backend/auth_service/.production.env
+
+backend/user_service/.development.env
+backend/user_service/.production.env
+
+backend/search_service/.development.env
+backend/search_service/.production.env
+
+backend/application_service/.development.env
+backend/application_service/.production.env
