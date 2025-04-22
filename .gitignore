@@ -16,3 +16,9 @@ backend/search_service/.production.env
 
 backend/application_service/.development.env
 backend/application_service/.production.env
+
+# dist
+backend/auth_service/dist
+backend/user_service/dist
+backend/search_service/dist
+backend/application_service/dist

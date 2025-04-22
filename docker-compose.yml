@@ -1,0 +1,31 @@
+version: '3.8'
+
+services:
+  user_service:
+    build:
+      context: ./backend/user_service
+      dockerfile: Dockerfile
+    ports:
+      - "7896:7896"
+    environment:
+      - MONGO_URI=mongodb://mongo:27017/hacker_news_clone
+    depends_on:
+      - mongo
+    networks:
+      - user-network
+
+  mongo:
+    image: mongo:latest
+    ports:
+      - "27018:27017"
+    volumes:
+      - mongo-data:/data/db
+    networks:
+      - user-network
+
+volumes:
+  mongo-data:
+
+networks:
+  user-network:
+    driver: bridge
